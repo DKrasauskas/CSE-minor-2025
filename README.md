@@ -17,6 +17,10 @@ This repo contains all of the code I used in my CSE minor course  Numerical meth
   </tr>
 </table>
 
+
+<img width="757" height="501" alt="image" src="https://github.com/user-attachments/assets/90549fa3-35f1-4663-a2e5-65c78296c577" />
+<img width="733" height="557" alt="image" src="https://github.com/user-attachments/assets/86b4758c-1026-47b1-b46b-b5f9932ca703" />
+
 # The Schnakenberg Model
 
 The Schnakenberg model suggests a physical mechanism behind the emergence of 
@@ -65,6 +69,46 @@ to appear.
 The computational domain is:
     
     Ω = (0, 4) × (0, 4)
+
+# Wave Equation
+
+Consider the following problem:
+
+    ∂²u/∂t² − ∇ · (k∇u) = f,        (x, y) ∈ Ω,  t ∈ (0, T]
+
+with boundary and initial conditions:
+
+    u(x, y, t) = 0,                 (x, y) ∈ ∂Ω
+    u(x, y, 0) = 0,                 (x, y) ∈ Ω
+    ∂u/∂t (x, y, 0) = 0,            (x, y) ∈ Ω
+
+The forcing term is given by:
+
+    f(x, y) = sin(ωt) * (
+        e^(−α(x−x₁)²−α(y−y₁)²)
+      + e^(−α(x−x₂)²−α(y−y₂)²)
+      + e^(−α(x−x₃)²−α(y−y₃)²)
+      + e^(−α(x−x₄)²−α(y−y₄)²)
+    )
+
+The coefficient k(x, y) is defined as:
+
+    k(x, y) =
+        0.1  if  x < Lx/2, y < Ly/2
+        0.4  if  x < Lx/2, y ≥ Ly/2
+        0.7  if  x ≥ Lx/2, y ≥ Ly/2
+        1.0  if  x ≥ Lx/2, y < Ly/2              (4)
+
+where:
+
+    Ω = [0, Lx] × [0, Ly]     with  Lx = 10,  Ly = 5
+    α = 40
+    (x₁, y₁) = (0.25Lx, 0.25Ly)
+    (x₂, y₂) = (0.25Lx, 0.75Ly)
+    (x₃, y₃) = (0.75Lx, 0.75Ly)
+    (x₄, y₄) = (0.75Lx, 0.25Ly)
+    ω = 4π
+
 
 The pattern should be almost completely formed at T = 20.
 
