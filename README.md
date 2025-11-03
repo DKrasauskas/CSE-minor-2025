@@ -66,6 +66,70 @@ The computational domain is:
     
     Ω = (0, 4) × (0, 4)
 
+# Boundary-Value Problem
+
+Consider the following boundary value problem:
+
+    −∇ · (k∇u) = f,          (x, y) ∈ Ω = (0, 10) × (0, 5)
+    u(x, y) = 0,              (x, y) ∈ ∂Ω
+
+where
+
+    f(x, y) = 
+        Σ (i = 1 to 9) Σ (j = 1 to 4)
+        e^(−α(x−i)²−α(y−j)²),
+
+with
+
+    α = 40,   (x, y) ∈ Ω.                          (1)
+
+Here, Ω = [0, 10] × [0, 5] is the rectangle with the corners (0, 0), (10, 0), (10, 5), and (0, 5).
+
+---
+
+## Finite-Difference Method
+
+For this method we shall only consider the homogeneous coefficient function:
+
+    k(x, y) = 1,     (x, y) ∈ Ω.
+
+---
+
+## Finite-Volume Method
+
+For this method we shall consider both the homogeneous coefficient function (2) and the following inhomogeneous coefficient function:
+
+    k(x, y) = 1 + 0.1(x + y + xy),     (x, y) ∈ Ω.
+
+
+The following results are obtained:
+<table>
+  <tr>
+     <td>
+      <img src="https://github.com/user-attachments/assets/8d96b60d-fe2d-42c4-acd4-cef5caf39f21"  width="100%" >
+        <figcaption align="center"> Schnakenberg at T = 0 </figcaption>
+    </td>
+    <td>
+      <img  src="https://github.com/user-attachments/assets/682c569d-398b-4e64-909c-20dac8f1b50a" width="100%">
+       <figcaption align="center"> Schnakenberg at T = 20 </figcaption>
+    </td>
+  </tr>
+</table>
+
+The following results are obtained:
+<table>
+  <tr>
+     <td>
+      <img src="https://github.com/user-attachments/assets/9dc67b2b-6564-4166-a8dc-74f45e5f1d9b"  width="100%" >
+        <figcaption align="center"> Schnakenberg at T = 0 </figcaption>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/f3cf0b4f-1758-4a9f-a5f4-2ccaced42184" width="100%">
+       <figcaption align="center"> Schnakenberg at T = 20 </figcaption>
+    </td>
+  </tr>
+</table>
+
 The pattern should be almost completely formed at T = 20.
 
 
