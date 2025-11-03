@@ -71,7 +71,7 @@ system = System(params, ui)
 system.debug = True
 
 #solve using either explicit or implicit integration model
-system.solve(INTEGRATION["IMPLICIT"])
+system.solve(INTEGRATION["EXPLICIT"])
 #uncomment for debug info
 print(f"\033[33mwall clock time:\033[0m\n{system.wallclock}")
 plt.show()

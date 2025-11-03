@@ -1,5 +1,4 @@
-import numpy as np
-from objects.function_definitions import *
+from Marching_problems.objects.function_definitions import *
 
 # Consider the following problem:
 #

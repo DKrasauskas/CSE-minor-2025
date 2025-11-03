@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib
 matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
-from objects.objects import WaveEquation, Domain
-from rendering.renderer import Renderer
+from Marching_problems.objects.objects import WaveEquation, Domain
+from Marching_problems.rendering.renderer import Renderer
 
 
 

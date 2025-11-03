@@ -77,7 +77,7 @@ class WaveEquation:
         # determine time step:
         self.dt_max = (2 / np.sqrt(self.explicit_bounds(self, np.max(self.Kfunction.K)))) * 0.5
         self.N = (T_1 - T_0) / self.dt_max
-        self.dt = self.dt_max
+        self.dt = 0.01#self.dt_max
         #determine u1
         self.u1 = self.u + self.u_prime * self.dt + 0.5 * (-self.FV.A.dot(self.u) + self.F) * self.dt ** 2
         #determine A1
