@@ -18,8 +18,6 @@ This repo contains all of the code I used in my CSE minor course  Numerical meth
 </table>
 
 
-<img width="757" height="501" alt="image" src="https://github.com/user-attachments/assets/90549fa3-35f1-4663-a2e5-65c78296c577" />
-<img width="733" height="557" alt="image" src="https://github.com/user-attachments/assets/86b4758c-1026-47b1-b46b-b5f9932ca703" />
 
 # The Schnakenberg Model
 
@@ -109,6 +107,19 @@ where:
     (x₄, y₄) = (0.75Lx, 0.25Ly)
     ω = 4π
 
+The following results are obtained:
+<table>
+  <tr>
+     <td>
+      <img src="https://github.com/user-attachments/assets/90549fa3-35f1-4663-a2e5-65c78296c577"  width="100%" >
+        <figcaption align="center"> Schnakenberg at T = 0 </figcaption>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/86b4758c-1026-47b1-b46b-b5f9932ca703" width="100%">
+       <figcaption align="center"> Schnakenberg at T = 20 </figcaption>
+    </td>
+  </tr>
+</table>
 
 The pattern should be almost completely formed at T = 20.
 
