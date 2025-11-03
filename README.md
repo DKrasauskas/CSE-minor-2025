@@ -113,11 +113,11 @@ The following results are obtained:
   <tr>
      <td>
       <img src="https://github.com/user-attachments/assets/90549fa3-35f1-4663-a2e5-65c78296c577"  width="100%" >
-        <figcaption align="center"> Schnakenberg at T = 0 </figcaption>
+        <figcaption align="center"> Solution of the wave equation. Refraction, reflection and interference phenomena are clearly seen. </figcaption>
     </td>
     <td>
       <img src="https://github.com/user-attachments/assets/86b4758c-1026-47b1-b46b-b5f9932ca703" width="100%">
-       <figcaption align="center"> Schnakenberg at T = 20 </figcaption>
+       <figcaption align="center"> Solution of the wave equation. Refraction, reflection and interference phenomena are clearly seen. </figcaption>
     </td>
   </tr>
 </table>
@@ -163,11 +163,11 @@ The following results are obtained:
   <tr>
      <td>
       <img src="https://github.com/user-attachments/assets/8d96b60d-fe2d-42c4-acd4-cef5caf39f21"  width="100%" >
-        <figcaption align="center"> Schnakenberg at T = 0 </figcaption>
+        <figcaption align="center"> k(x, y) = 1 + 0.1(x + y + xy) </figcaption>
     </td>
     <td>
       <img  src="https://github.com/user-attachments/assets/682c569d-398b-4e64-909c-20dac8f1b50a" width="100%">
-       <figcaption align="center"> Schnakenberg at T = 20 </figcaption>
+       <figcaption align="center"> Forcing function </figcaption>
     </td>
   </tr>
 </table>
@@ -177,11 +177,11 @@ The following results are obtained:
   <tr>
      <td>
       <img src="https://github.com/user-attachments/assets/9dc67b2b-6564-4166-a8dc-74f45e5f1d9b"  width="100%" >
-        <figcaption align="center"> Schnakenberg at T = 0 </figcaption>
+        <figcaption align="center"> FD solution </figcaption>
     </td>
     <td>
       <img src="https://github.com/user-attachments/assets/f3cf0b4f-1758-4a9f-a5f4-2ccaced42184" width="100%">
-       <figcaption align="center"> Schnakenberg at T = 20 </figcaption>
+       <figcaption align="center"> FV solution </figcaption>
     </td>
   </tr>
 </table>
