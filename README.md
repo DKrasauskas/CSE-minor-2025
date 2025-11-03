@@ -4,18 +4,6 @@
 This repo contains all of the code I used in my CSE minor course  Numerical methods for PDEs. It contains a set of Finite-Volume and Finitie-Difference problems. 
 
 
-<table>
-  <tr>
-     <td>
-      <img src="https://github.com/user-attachments/assets/3d742229-25ea-42c3-8f94-5d342aace95d" width="100%" >
-        <figcaption align="center"> Schnakenberg at T = 0 </figcaption>
-    </td>
-    <td>
-      <img src="https://github.com/user-attachments/assets/1ddd1714-43da-46f4-a1d7-8038abc5e7f7" width="100%">
-       <figcaption align="center"> Schnakenberg at T = 20 </figcaption>
-    </td>
-  </tr>
-</table>
 
 # The Schnakenberg Model
 
@@ -65,6 +53,74 @@ to appear.
 The computational domain is:
     
     Ω = (0, 4) × (0, 4)
+The pattern should be almost completely formed at T = 20.
+
+The following results are obtained:
+<table>
+  <tr>
+     <td>
+      <img src="https://github.com/user-attachments/assets/3d742229-25ea-42c3-8f94-5d342aace95d" width="100%" >
+        <figcaption align="center"> Schnakenberg at T = 0 </figcaption>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/1ddd1714-43da-46f4-a1d7-8038abc5e7f7" width="100%">
+       <figcaption align="center"> Schnakenberg at T = 20 </figcaption>
+    </td>
+  </tr>
+</table>
+
+# Wave Equation
+
+Consider the following problem:
+
+    ∂²u/∂t² − ∇ · (k∇u) = f,        (x, y) ∈ Ω,  t ∈ (0, T]
+
+with boundary and initial conditions:
+
+    u(x, y, t) = 0,                 (x, y) ∈ ∂Ω
+    u(x, y, 0) = 0,                 (x, y) ∈ Ω
+    ∂u/∂t (x, y, 0) = 0,            (x, y) ∈ Ω
+
+The forcing term is given by:
+
+    f(x, y) = sin(ωt) * (
+        e^(−α(x−x₁)²−α(y−y₁)²)
+      + e^(−α(x−x₂)²−α(y−y₂)²)
+      + e^(−α(x−x₃)²−α(y−y₃)²)
+      + e^(−α(x−x₄)²−α(y−y₄)²)
+    )
+
+The coefficient k(x, y) is defined as:
+
+    k(x, y) =
+        0.1  if  x < Lx/2, y < Ly/2
+        0.4  if  x < Lx/2, y ≥ Ly/2
+        0.7  if  x ≥ Lx/2, y ≥ Ly/2
+        1.0  if  x ≥ Lx/2, y < Ly/2              (4)
+
+where:
+
+    Ω = [0, Lx] × [0, Ly]     with  Lx = 10,  Ly = 5
+    α = 40
+    (x₁, y₁) = (0.25Lx, 0.25Ly)
+    (x₂, y₂) = (0.25Lx, 0.75Ly)
+    (x₃, y₃) = (0.75Lx, 0.75Ly)
+    (x₄, y₄) = (0.75Lx, 0.25Ly)
+    ω = 4π
+
+The following results are obtained:
+<table>
+  <tr>
+     <td>
+      <img src="https://github.com/user-attachments/assets/90549fa3-35f1-4663-a2e5-65c78296c577"  width="100%" >
+        <figcaption align="center"> Solution of the wave equation. Refraction, reflection and interference phenomena are clearly seen. </figcaption>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/86b4758c-1026-47b1-b46b-b5f9932ca703" width="100%">
+       <figcaption align="center"> Solution of the wave equation. Refraction, reflection and interference phenomena are clearly seen. </figcaption>
+    </td>
+  </tr>
+</table>
 
 # Boundary-Value Problem
 
@@ -107,11 +163,11 @@ The following results are obtained:
   <tr>
      <td>
       <img src="https://github.com/user-attachments/assets/8d96b60d-fe2d-42c4-acd4-cef5caf39f21"  width="100%" >
-        <figcaption align="center"> Schnakenberg at T = 0 </figcaption>
+        <figcaption align="center"> k(x, y) = 1 + 0.1(x + y + xy) </figcaption>
     </td>
     <td>
       <img  src="https://github.com/user-attachments/assets/682c569d-398b-4e64-909c-20dac8f1b50a" width="100%">
-       <figcaption align="center"> Schnakenberg at T = 20 </figcaption>
+       <figcaption align="center"> Forcing function </figcaption>
     </td>
   </tr>
 </table>
@@ -121,16 +177,16 @@ The following results are obtained:
   <tr>
      <td>
       <img src="https://github.com/user-attachments/assets/9dc67b2b-6564-4166-a8dc-74f45e5f1d9b"  width="100%" >
-        <figcaption align="center"> Schnakenberg at T = 0 </figcaption>
+        <figcaption align="center"> FD solution </figcaption>
     </td>
     <td>
       <img src="https://github.com/user-attachments/assets/f3cf0b4f-1758-4a9f-a5f4-2ccaced42184" width="100%">
-       <figcaption align="center"> Schnakenberg at T = 20 </figcaption>
+       <figcaption align="center"> FV solution </figcaption>
     </td>
   </tr>
 </table>
 
-The pattern should be almost completely formed at T = 20.
+
 
 
 
